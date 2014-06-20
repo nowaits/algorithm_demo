@@ -1,12 +1,12 @@
 count = 0;
-def show(A, pos, len):
-    for i in range(pos, len):
+def show(A, pos, size):
+    for i in range(pos, size):
         A[i], A[pos] = A[pos], A[i];
-        if (pos == len - 1):
+        if (pos == size - 1):
             print(A);
             global count
             count += 1;
         else:
-            show(A, pos + 1, len);
+            show(A, pos + 1, size);
         A[i], A[pos] = A[pos], A[i];
     return count;
