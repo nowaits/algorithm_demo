@@ -6,6 +6,7 @@ import q_sort
 import heap_sort
 import permutation
 import clockwise_print
+import cstr
 
 x0 = ar.rarray(0, 30);
 print "++++++++++ the unsort array ++++++++++\n";
@@ -33,3 +34,11 @@ print "\n--------- clock_wrise show matrix[%d][%d]---------\n"%(M, N);
 A = ar.genMatrix(M, N);
 ar.printMatrix(A, M, N);
 clockwise_print.show(A, M, N);
+
+N = 9;
+offset = -2;
+print "\n--------- circulate rotate a array ---------\n";
+A = ar.carray(0, N);
+print(A);
+cstr.rotate_array(A, offset, N);
+print(A);
